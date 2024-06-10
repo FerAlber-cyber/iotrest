@@ -13,11 +13,7 @@ return new class extends Migration
     {
         Schema::create('actuators', function (Blueprint $table) {
             $table->id();
-            $table->string("name")->unique();
-            $table->string("type");
-            $table->decimal("value", 10,2);
-            $table->datetime("date");
-            $table->integer("user_id")->unsigned();
+            $table->int("value");
             $table->timestamps();
         });
     }
